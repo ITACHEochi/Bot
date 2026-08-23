@@ -276,7 +276,7 @@ CallbackQueryHandler(btno, pattern="^(sign|dama|searchotl|del)$")
     ],
     },fallbacks=[]   
 )   
-app = app = Application.builder().token("8851173084:AAGqcwviDp9C3AxVBhZh5KUIbsgSXU14eMI").build()
+app = app = Application.builder().token("").build()
 app.add_handler(conv)
 try :
     app.run_polling()
