@@ -2,6 +2,8 @@ from telegram.ext import Application,CommandHandler,MessageHandler,ConversationH
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 import json 
 import requests
+import os
+TOKEN = os.getenv("BOT_TOKEN")
 t1 = 0
 t2 = 1
 t3 = 2
@@ -276,7 +278,7 @@ CallbackQueryHandler(btno, pattern="^(sign|dama|searchotl|del)$")
     ],
     },fallbacks=[]   
 )   
-app = app = Application.builder().token("").build()
+app = app = Application.builder().token(TOKEN).build()
 app.add_handler(conv)
 try :
     app.run_polling()
